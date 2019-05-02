@@ -45,3 +45,13 @@ for i in result:
 result = cursor.execute("select * from first_table left join second_table using (id) ")
 for i in result:
     print(i)
+
+#using groupby clause
+result = cursor.execute("select * from first_table group by dob")
+for i in result:
+    print(i)
+
+#using order by
+result = cursor.execute("select * from first_table order by dob desc") #It wil return rows with desending order in date of birth
+for i in result:
+    print(i)
